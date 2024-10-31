@@ -11,8 +11,11 @@ config.normal_type = SapiensNormalType.NORMAL_1B # Disabled by default
 # config.depth_type = SapiensDepthType.DEPTH_03B # Disabled by default
 predictor = SapiensPredictor(config)
 
-videoUrl = 'https://youtube.com/shorts/lXfX9qw0yAo?si=SrMq4-PGhBEau91l'
-cap = cap_from_youtube(videoUrl, start=timedelta(minutes=0, seconds=0))
+#videoUrl = 'https://youtube.com/shorts/lXfX9qw0yAo?si=SrMq4-PGhBEau91l'
+#cap = cap_from_youtube(videoUrl, start=timedelta(minutes=0, seconds=0))
+
+videoUrl = 'video.mov'
+cap = cv2.VideoCapture(videoUrl)
 
 
 cv2.namedWindow("Predicted Map", cv2.WINDOW_NORMAL)
